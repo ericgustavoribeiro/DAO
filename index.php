@@ -22,6 +22,19 @@ require_once("config.php");
 
 
 $user = new Usuario();
-$user->login("Eric G", "1234");
+$user->loadById(7);
+$user->update("JOAO", "sas");
+
+
 echo $user;
+
+//$user->setLogin("Bb");
+//$user->setSenha("12");
+
+//$user->insert();
+
+//echo $user;
+
+//$user->login("Eric G", "1234");
+//echo $user;
 ?>
