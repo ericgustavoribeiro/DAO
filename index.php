@@ -9,10 +9,19 @@ require_once("config.php");
 
 //echo json_encode($usuarios);
 
+//$user = new Usuario();
+//$user->loadById(1);
+//echo $user;
+
+
+//$usuarios = Usuario::getList();
+//echo json_encode($usuarios);
+
+//$usuarios = Usuario::search("e");
+//echo json_encode($usuarios);
+
+
 $user = new Usuario();
-
-$user->loadById(1);
-
+$user->login("Eric G", "1234");
 echo $user;
-
 ?>
