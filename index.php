@@ -21,12 +21,18 @@ require_once("config.php");
 //echo json_encode($usuarios);
 
 
+//$user = new Usuario();
+//$user->loadById(7);
+//$user->update("JOAO", "sas");
+
+
 $user = new Usuario();
 $user->loadById(7);
-$user->update("JOAO", "sas");
-
+$user->delete();
 
 echo $user;
+
+//echo $user;
 
 //$user->setLogin("Bb");
 //$user->setSenha("12");

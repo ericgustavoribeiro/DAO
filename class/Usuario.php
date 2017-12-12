@@ -138,9 +138,19 @@ class Usuario{
 			":ID"=>$this->getIdusuario()
 		));
 
- 
+	}
 
+	public function delete(){
+		$sql = new Sql();
 
+		$sql->query("DELETE FROM usuarios WHERE id_user = :ID", array(
+		
+			":ID"=>$this->getIdusuario()
+		));
+
+		$this->setIdusuario(null);
+		$this->setLogin(null);
+		$this->setSenha(null);
 	}
 
 	public function __construct($login = "", $senha = ""){
@@ -154,6 +164,7 @@ class Usuario{
 		return json_encode(array(
 			"id_user"=>$this->getIdusuario(),
 			"login"=>$this->getLogin(),
+
 			"senha"=>$this->getSenha()//->format("d/m/Y H:i:s")
 
 		));	
